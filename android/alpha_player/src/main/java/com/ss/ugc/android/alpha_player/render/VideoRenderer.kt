@@ -38,10 +38,10 @@ class VideoRenderer(val alphaVideoView: IAlphaVideoView) : IRender {
      */
     private var halfRightVerticeData = floatArrayOf(
         // X, Y, Z, U, V
-        -1.0f, -1.0f, 0f, 0.5f, 0f,
-        1.0f, -1.0f, 0f, 1f, 0f,
-        -1.0f, 1.0f, 0f, 0.5f, 1f,
-        1.0f, 1.0f, 0f, 1f, 1f
+        -1.0f, -1.0f, 0f, 0f, 0f,
+        1.0f, -1.0f, 0f, 0.5f, 0f,
+        -1.0f, 1.0f, 0f, 0f, 1f,
+        1.0f, 1.0f, 0f, 0.5f, 1f
     )
 
     private var triangleVertices: FloatBuffer

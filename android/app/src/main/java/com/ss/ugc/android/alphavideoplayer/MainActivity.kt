@@ -65,12 +65,18 @@ class MainActivity : AppCompatActivity() {
         video_gift_view.detachView()
     }
 
+    /**
+     * 注意，配置文件的目录要放对了
+     * config.json 放到 /storage/emulated/0/alphaVideoGift/XXX 目录下
+     * @param v View
+     */
     fun playGift(v: View) {
         val testPath = getResourcePath()
         Log.i("dzy", "play gift file path : $testPath")
         if ("".equals(testPath)) {
             Toast.makeText(this, "please run 'gift_install.sh gift/demoRes' for load alphaVideo resource.", Toast.LENGTH_SHORT)
                 .show()
+            return
         }
         video_gift_view.startVideoGift(testPath)
     }

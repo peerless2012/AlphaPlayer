@@ -130,20 +130,20 @@ public class TextureCropUtil {
     private static float[] getZoomData(float leftZoomRatio, float topZoomRatio, float rightZoomRatio, float bottomZoomRatio) {
         return new float[] {
                 // X, Y, Z, U, V
-                -1.0f + leftZoomRatio * 2, -1.0f + bottomZoomRatio * 2, 0, 0.5f, 0.f,
-                1.0f - rightZoomRatio * 2, -1.0f + bottomZoomRatio * 2, 0, 1.f, 0.f,
-                -1.0f + leftZoomRatio * 2, 1.0f - topZoomRatio * 2, 0, 0.5f, 1.f,
-                1.0f - rightZoomRatio * 2, 1.0f - topZoomRatio * 2, 0, 1.f, 1.f,
+                -1.0f + leftZoomRatio * 2, -1.0f + bottomZoomRatio * 2, 0, 0.f, 0.f,
+                1.0f - rightZoomRatio * 2, -1.0f + bottomZoomRatio * 2, 0, 0.5f, 0.f,
+                -1.0f + leftZoomRatio * 2, 1.0f - topZoomRatio * 2, 0, 0f, 1.f,
+                1.0f - rightZoomRatio * 2, 1.0f - topZoomRatio * 2, 0, 0.5f, 1.f,
         };
     }
 
     private static float[] getCropData(float leftCropRatio, float topCropRatio, float rightCropRatio, float bottomCropRatio) {
         return new float[] {
                 // X, Y, Z, U, V
-                -1.0f,  -1.0f,  0, 0.5f + leftCropRatio / 2,    0.f + bottomCropRatio,
-                1.0f,   -1.0f,  0, 1.0f - rightCropRatio / 2,   0.f + bottomCropRatio,
-                -1.0f,  1.0f,   0, 0.5f + leftCropRatio / 2,    1.f - topCropRatio,
-                1.0f,   1.0f,   0, 1.0f - rightCropRatio / 2,   1.f - topCropRatio,
+                -1.0f,  -1.0f,  0, 0f + leftCropRatio / 2,    0.f + bottomCropRatio,
+                1.0f,   -1.0f,  0, 0.5f - rightCropRatio / 2,   0.f + bottomCropRatio,
+                -1.0f,  1.0f,   0, 0.f + leftCropRatio / 2,    1.f - topCropRatio,
+                1.0f,   1.0f,   0, 0.5f - rightCropRatio / 2,   1.f - topCropRatio,
         };
     }
 }
